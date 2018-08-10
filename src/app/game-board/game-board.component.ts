@@ -6,17 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-board.component.styl']
 })
 export class GameBoardComponent implements OnInit {
-  board: Array<Array<number>>;
+  board: number[][];
   constructor() {
   }
 
   ngOnInit() {
-    let emptyRow: Array<number> = this.fillArray(0, 21);
+    let emptyRow: number[] = this.fillArray(0, 21);
     this.board = this.fillArray(emptyRow);
   }
 
-  fillArray(defaultValue: any = 0, arraySize: number = 41) {
-    let array: Array<any> = [];
+  fillArray(defaultValue: any = 0, arraySize: number = 41): any[] {
+    let array: any[] = [];
     let index = 0;
     while (index < arraySize) {
       array.push(defaultValue);
