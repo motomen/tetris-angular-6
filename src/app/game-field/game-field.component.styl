@@ -1,13 +1,19 @@
 .tetris
 	&__game-field
-		width 430px
+		width 420px
 		height 800px
 		background-color lightgray
 		display flex
 		flex-direction column
 		&_row
 			display flex
+			&:last-child
+				background-color dodgerblue
 		&_cell
 			width 20px
 			height 20px
 			text-align center
+			&:first-child
+				background-color dodgerblue
+			&:last-child
+				background-color dodgerblue
