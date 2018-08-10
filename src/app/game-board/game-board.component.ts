@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-game-field',
-  templateUrl: './game-field.component.html',
-  styleUrls: ['./game-field.component.styl']
+  selector: 'app-game-board',
+  templateUrl: './game-board.component.html',
+  styleUrls: ['./game-board.component.styl']
 })
-export class GameFieldComponent implements OnInit {
-  field: Array<Array<number>>;
+export class GameBoardComponent implements OnInit {
+  board: Array<Array<number>>;
   constructor() {
   }
 
   ngOnInit() {
     let emptyRow: Array<number> = this.fillArray(0, 21);
-    this.field = this.fillArray(emptyRow);
+    this.board = this.fillArray(emptyRow);
   }
 
   fillArray(defaultValue: any = 0, arraySize: number = 41) {
